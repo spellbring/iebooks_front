@@ -25,6 +25,8 @@
     <!-- Custom Theme JavaScript -->
     <script src="assets/template/js/freelancer.js"></script>
 
+      <script src="assets/scripts/functions/global.js"></script>
+
   
 </body>
 

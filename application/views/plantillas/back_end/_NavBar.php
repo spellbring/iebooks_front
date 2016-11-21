@@ -19,7 +19,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Cuentos Asignados</a>
+                        <a href="#portfolio">Clases Disponibles</a>
                     </li>
                   
                     <li class="page-scroll">

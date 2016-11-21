@@ -16,6 +16,8 @@ class Home extends CI_Controller {
 
     public function index()
     {
+        $this->load->model('clases_model');
+        
         $_datos = array();
         $_datos['plantilla']['css'] = array(
             'styles/climacons-font',
@@ -32,26 +34,29 @@ class Home extends CI_Controller {
             'scripts/pages/dashboard'
         );
         
-        
-        //Begin: Variables
-        $_datos['plantilla']['current_menu'] = MENU_INICIO;
-        $_datos['plantilla']['current_sub_menu'] = SUBMENU_NULL;
-        $_datos['plantilla']['titulo'] = 'AhoraDescuentos.com | Admin';
-        //End: Variables
 
-
-        //Begin: Objetos
-//        $_datos['plantilla']['countDescuentos'] = $this->descuento_model->getCountDescuentosAgregados($this->session->userdata(SESS_ID_CLIENTE));
-//        $_datos['plantilla']['countTarjetas']   = $this->tarjeta_model->getCountCards($this->session->userdata(SESS_ID_CLIENTE));
-//        $_datos['plantilla']['countSolicitudes']   = $this->solicitud_model->getCountSolicitudes(SOLICITUD_PENDIENTE,$this->session->userdata(SESS_ID_CLIENTE));
-//        $_datos['plantilla']['countTopSolicitudes']   = $this->solicitud_model->getCountTopSolicitudes($this->session->userdata(SESS_ID_CLIENTE));
-//        $_datos['plantilla']['mejorDescuento']   = $this->descuento_model->getMejorDescuento($this->session->userdata(SESS_ID_CLIENTE));
-//        $_datos['plantilla']['countSolicitudesPendientes']  =  $this->solicitud_model->getSolicitudesCount(0,$this->session->userdata(SESS_ID_CLIENTE));
-//         $_datos['plantilla']['objSolicitud'] = $this->solicitud_model->getSolicitudes(0, $this->session->userdata(SESS_ID_CLIENTE), 3);
         //End: Objetos
+        $_datos['objClases'] = $this->clases_model->getClasesIns($this->session->userdata('sess_perfil_inst'));
+        
+        $_datos['objMaterial'] = $this->clases_model;
 
         $_datos['plantilla']['vista'] = 'index';
         $this->load->view('plantillas/plantilla_back', $_datos);
+    }
+    
+    public function abrir_clase(){
+        $this->load->library('encrypt');
+        $this->load->model('clases_model');
+        $_datos = array();
+       
+        if ($this->input->is_ajax_request()) {
+             if ($this->input->post('__MA__')) {
+              $id = base64_decode($this->security->xss_clean(strip_tags($this->input->post('__MA__'))));   
+              $_datos['obj_clase_material'] = $this->clases_model->get_clase_material($id);         
+              $this->load->view('back_end/modal_popup/modal_cuento', $_datos);
+             }
+            
+        }
     }
 
 }
