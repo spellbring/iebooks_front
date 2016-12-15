@@ -53,9 +53,11 @@ class clases_model extends CI_Model{
           return true;
     }
     public function get_clase_material($id_clase){
-           $this->db->select('b.clase_idclase, b.estado, b.material_interactivo_idmaterial_interactivo, a.nombre_material')
+           $this->db->select('b.clase_idclase, b.estado, b.material_interactivo_idmaterial_interactivo, a.nombre_material, u.idusuario')
                   ->from('clase_material b')   
                    ->join('material_interactivo a','a.idmaterial_interactivo = b.material_interactivo_idmaterial_interactivo')
+                   ->join('clase c', 'b.clase_idclase = c.idclase')
+                   ->join('usuario u', 'c.usuario_idusuario = u.idusuario')
                    ->where('b.clase_idclase',$id_clase);
             $consulta = $this->db->get();        
         return $consulta->result();

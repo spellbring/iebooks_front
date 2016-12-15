@@ -45,6 +45,7 @@
                                     <div class="col-md-6">
                                       <?php echo $oClases->nombre_p. " ".$oClases->apellido_p?>
                                     </div>
+                                    
                                     <div class="col-md-12">
                                         <button class="btn btn-default" data-toggle="modal" data-target=".bs-modal-sm"
                                                 onclick="Global.prototype.modal_ajax('<?php echo base64_encode($oClases->idclase); ?>'

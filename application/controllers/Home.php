@@ -8,10 +8,7 @@ class Home extends CI_Controller {
             redirect(base_url('login'));
             exit();
         }
-//        $this->load->model('descuento_model');
-//        $this->load->model('tarjeta_model');
-//        $this->load->model('solicitud_model');
-//        $this->load->library('calendar');
+
     }
 
     public function index()
