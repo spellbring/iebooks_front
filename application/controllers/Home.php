@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 
     public function index()
     {
-        $this->load->model('clases_model');
+        $this->load->model('Clases_model');
         
         $_datos = array();
         $_datos['plantilla']['css'] = array(
@@ -33,9 +33,9 @@ class Home extends CI_Controller {
         
 
         //End: Objetos
-        $_datos['objClases'] = $this->clases_model->getClasesIns($this->session->userdata('sess_perfil_inst'));
+        $_datos['objClases'] = $this->Clases_model->getClasesIns($this->session->userdata('sess_perfil_inst'));
         
-        $_datos['objMaterial'] = $this->clases_model;
+        $_datos['objMaterial'] = $this->Clases_model;
 
         $_datos['plantilla']['vista'] = 'index';
         $this->load->view('plantillas/plantilla_back', $_datos);
@@ -43,13 +43,13 @@ class Home extends CI_Controller {
     
     public function abrir_clase(){
         $this->load->library('encrypt');
-        $this->load->model('clases_model');
+        $this->load->model('Clases_model');
         $_datos = array();
        
         if ($this->input->is_ajax_request()) {
              if ($this->input->post('__MA__')) {
               $id = base64_decode($this->security->xss_clean(strip_tags($this->input->post('__MA__'))));   
-              $_datos['obj_clase_material'] = $this->clases_model->get_clase_material($id);         
+              $_datos['obj_clase_material'] = $this->Clases_model->get_clase_material($id);         
               $this->load->view('back_end/modal_popup/modal_cuento', $_datos);
              }
             

@@ -5,7 +5,7 @@
  *
  * @author Jaime
  */
-class clases_model extends CI_Model{
+class Clases_model extends CI_Model{
     
      public function __construct() {
         parent::__construct();

@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class solicitud_model extends CI_Model
+class Solicitud_model extends CI_Model
 {
 
     public function __construct()

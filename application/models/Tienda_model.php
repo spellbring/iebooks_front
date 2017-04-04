@@ -1,6 +1,6 @@
 <?php
 
-class tienda_model extends CI_Model {
+class Tienda_model extends CI_Model {
     
     public function __construct() {
         parent::__construct();

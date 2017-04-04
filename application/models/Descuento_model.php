@@ -1,6 +1,6 @@
 <?php
 
-class descuento_model extends CI_Model
+class Descuento_model extends CI_Model
 {
 
     public function __construct()
