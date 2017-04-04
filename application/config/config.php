@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/iebooks_front';
+$config['base_url'] = 'http://192.168.183.129/iebooks_front/';
 
 /*
 |--------------------------------------------------------------------------
