@@ -6,7 +6,6 @@ class Login extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->library('form_validation');
-//         $this->load->model('solicitud_model');
     }
     
     public function index()
@@ -97,7 +96,7 @@ class Login extends CI_Controller {
     
     public function check_user($user)
     {
-        $this->load->model('usuarios_model');
+        $this->load->model('Usuarios_model');
         $usuario = $this->usuarios_model->check_user($user);
         if($usuario)
         {
