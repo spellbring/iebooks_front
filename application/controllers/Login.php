@@ -97,7 +97,7 @@ class Login extends CI_Controller {
     public function check_user($user)
     {
         $this->load->model('Usuarios_model');
-        $usuario = $this->usuarios_model->check_user($user);
+        $usuario = $this->Usuarios_model->check_user($user);
         if($usuario)
         {
             foreach($usuario as $objUser)
