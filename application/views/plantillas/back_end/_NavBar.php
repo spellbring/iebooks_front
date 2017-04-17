@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">I-Ebooks</a>
+                <a class="navbar-brand" href="#page-top">Cu&eacute;ntame!</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

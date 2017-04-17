@@ -8,7 +8,7 @@
                             <div class="text-center mb15">
                                    <img src="<?php echo base_url('assets/images/buho_mediano.png'); ?>" style="height: 300px; width: 300px;"/>
                             </div>
-                            <p class="text-center mb30">Bienvenido a I-ebooks!!</p>
+                            <h1 class="text-center mb30">Bienvenido a Cu&eacute;ntame</h1>
                             <div class="form-inputs">
                                 <input type="text" value="<?php echo $this->session->userdata('sess_user_admin'); ?>" name="txtUser" class="form-control input-lg" placeholder="Usuario">
                                 <input type="password" name="txtPass" class="form-control input-lg" placeholder="Contrase&ntilde;a">

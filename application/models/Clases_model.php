@@ -32,8 +32,8 @@ class Clases_model extends CI_Model{
                 . ', a.apellido_p'
                 . ', i.descripcion as descripcionins')
                 ->from('clase c')
-                ->join('usuario a', 'a.idusuario', 'c.usuario_idusuario')
-                ->join('institucion i','i.idinstitucion','a.institucion_idinstitucion')
+                ->join('usuario a', 'a.idusuario = c.usuario_idusuario','INNER')
+                ->join('institucion i','i.idinstitucion = a.institucion_idinstitucion','INNER')
                 ->where('i.idinstitucion',$id_institucion);
         return $this->db->get()->result();
     }

@@ -42,6 +42,7 @@ class Home extends CI_Controller {
     }
     
     public function abrir_clase(){
+        
         $this->load->library('encrypt');
         $this->load->model('Clases_model');
         $_datos = array();

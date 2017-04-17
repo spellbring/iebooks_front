@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>I-Ebook! - Bienvenidos</title>
+    <title>Cu&eacute;ntame! - Bienvenidos</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="assets/template/css/bootstrap.min.css" rel="stylesheet">
