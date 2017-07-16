@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+    ~ Copyright (c) 2011-2014 by Animatron.
+    ~ All rights are reserved.
+-->
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>&quot;Untitled&quot; by Darkriz</title>
+    <meta name="description" content="">
+
+        <meta name="ad.size" content="width=800,height=450">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            top: 50%;
+            left: 50%;
+            display: block;
+            position: absolute;
+            background-color: #ffffff;
+        }
+
+
+    </style>
+
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Underdog:400"/>
+
+
+        <script type="text/javascript" src="player.js"></script>
+        <script type="text/javascript">
+            function start() {
+                var WRAPPER_ID = 'target';
+                var wrapper = document.getElementById(WRAPPER_ID);
+                var inIFrame = (window.self !== window.top);
+                var queryParams = (function () {
+                    var params = {};
+                    location.search.substring(1).split('&').forEach(function (item) {
+                        var temp = item.split('=');
+                        if (temp[0]) params[temp[0]] = temp[1];
+                    });
+                    return params;
+                })();
+
+
+                var playerParams = {
+                    width: (inIFrame && window.innerWidth) || parseInt(queryParams.w) || 800,
+                    height: (inIFrame && window.innerHeight) || parseInt(queryParams.h) || 450,
+                    autoPlay: !!parseInt(queryParams.a) || true,
+                    repeat: !!parseInt(queryParams.r) || false,
+                    controlsEnabled: !!parseInt(queryParams.c) || false
+                };
+
+                if (!inIFrame) {
+                    document.body.className = 'no-iframe';
+                    wrapper.className = 'no-iframe';
+                }
+                wrapper.style.width = playerParams.width + 'px';
+                wrapper.style.height = playerParams.height + 'px';
+                wrapper.style.marginLeft = -Math.floor(playerParams.width / 2) + 'px';
+                wrapper.style.marginTop = -Math.floor(window.innerHeight / 2) + 'px';
+
+                var animation = {"meta":{"id":"30876a59354cb581cf07e834","created":1500153648140,"modified":1500153648140,"author":"Darkriz","authorUsername":"Darkriz","description":"","name":"","duration":1.5,"numberOfScenes":1,"projectAccess":{"visibility":"PUBLIC","writeAccess":[],"readAccess":["PUBLIC"]}},"anim":{"dimension":[640.0,360.0],"framerate":24.0,"loop":false,"paths":["JngeEs+k4AARQm41m/jblIACbcpAANxrSBHAAF19OAALr5pyqQI1GuAAmo1wADTlTfxwAAihIQCY","JmXa0s+k4AARQm41m/jblIACbcpAANxrSBHAAF19OAALr5pyqQI1GuAAmo1wADTlTfxwAAihIQCY","JnLw0PrjC/8QAAnQLoAA6XUZxngABADzwAAgB3M47OM9AEAABggB4AATn6MAAc0VzHTwABf+Z4AAv/LpdaY6dAugACEAmA==","Jor3D1ga0+hGPmXbXasok2pZK6ABNlcgAG1dVRLQADUiaAAajNVFqi2tSAAE1qOAAaqLq6tAASuJQAWqkATtXPWqtjGgY0IB\nMA==","JJ7KPWBrT6EY+ZdrdqyiTalkrgAE2VwAAbV3VEtAANSJoABqM1USqLa1IAATWpAABqomrq0ABK4lABaqQBO1c7aq2MeBjQgE\nwA==","JqEIzE4E9Lx5XF5Bnt1za7USmZUTEo2iR7VZHwABOs3QAB0+SR9uq6TnGbfOK8MldY/ZOEx/OYmyolyyGeeOSv0yRCAT","Jqo3C1QE8AAOE5+VrW0r75sAAJ982AAD8rXSW3gACPZTwABHsnmpWktvQZQAAnoMoAAPNSq2leAAHCchAJg=","JIqsK5qTJwZwWR80SMgwoknVdOJS6fK3a3WboABMlcAAbPnCVsqJdrm1dHa7yGUkUnpeI1Hzkr6zccsgYYjmJvV3QgEw","JJLfrVATwAA4Tn5WxbSvvm4AAn3zcAAPytdJbeAAI9lPAAEeyealaS29BkgACegyQAA81KLaV4AAcJyEAmA=","JpaWD24E4AAea3TrDFQ6GVAAJ0MqAAOnWZ1hwABDKzgACGVcxTzrLnmsAAnPNYAA5ioYp3AADzWhAJg=","JLXWPbgTgAB5rdOssVDoZUAAnQyoAA6dZnWHAAEMrOAAIZVzFPOsueawACc81gADmKdincAAPNaEAmA=","JoQhCmNbGbagAAKFAmAABCxfU6DgAAC/aLwAA7xKAAAL9pBOg06Bgv2gAAMWSWAAAoL9oAAEE6CsX6AAAUCYvAAEPZoAABQJ\nkLF+seCFAmAAAhAJgA==","KHPFiEUwwEAJA2F6E0vyi88JIGxgJYF+UMJ32AAACYA=","KIAHBvCPOAAJQ11N7TeulDQACdKGgADqb1ZDcAANejEAACqT2DEGAAAxAABVbJQyAAEw","KESzaEUwwEGdA2F6DQvyi88JoGxgJYF+UMJ33AAACYA=","JqHqG8I84AAlDXU3tN66UMAAJ0oaAAOpvVkNwAA16MQAAKpPYMQSAADEAAFVslDEAATA","JueLHqPDKhkYAAChEoAAAQnyGevYAABE0iEoAABEoMGFEnyCDstgAAyXm7AAAoO1+AAEGDgYUOAAAOy4wAABKmqAAAOy3CfI\nhaohEoIAAIQCYA==","KJrVhnwpNmPAAGzHNqLbUNwSVOM4qnGcFTjBkyokMdldgMS4MAAnUSAAA6m92oXYYt8zMwYu2YDJK6t9EGJiJmDDGowYlvof\nRNV3LuHIl44Q5GUAYpSVAApLAASxwBN4+2PG+caJDQAErmeAALzU1qPXaatT6izkMrwYcq+GDThXdDLnDgyou7j6ZZHXmxwd\nLgw4Nl2hKzLtCVpjUZ9DH0B9GO184zFEvOVvonAoZIMmAyUSMUSwYYu4DFMXcBiYfQomz5xdyb7WcHNlcoMmz5hK0u1RK1zg\nAAuooAEIQ52ScyZM5ACJ4ATOTFMruEsbzgTiNAAPO5oABj+0MeomaMgQZTEr+DGIlbVLcHOGaoou0uEr75lu1GVxM4MnCbcE\n1EsnAAAQhAYnGM3w","KDV3iEUwwEGZA2F6DQvyi88JoGxgJkd+UMJ2SAAACYA=","JoOK28I84AAlDXU3tN66UMAAJ0oYAAOpvlkNwAA16MQAAKpPYMQSAADEAAFVslDEAATA","KGSJaEUwwEGdA2F6DPvyi88JoGxgJkl+UMJ2RAAACYA=","JuGvG8I84AAlDXU3tN66UMAAJ0oaAAOpvVkNwAA16MQAAKpPYMQUAADEAAFVslDEAATA","AjVIocAAABoAAAK7ODW3XkAAABoAAAVEyAEw","KJfbBr6QhMA=","I3yo3H8t/mqRMA==","I3x14aEtAAS/sA==","I3x12yAtCkrtMA==","I32/4Pot8IU88A==","If+SzlKEwA==","IO3d94CEwA==","IRFP94CEwA==","IsGVvDuhMA==","KFT4SG8uhMA=","Iz5rvDShMA==","JZ17K2iITA==","Gf+3foTA","H//xNBIT","IoQ8OgMpUklw","IoTgOZWprjbw","IoQ8OgMhMA==","IABc24aEwA==","HgAC/KIT","Ieve6AyEwA==","IABa24aEwA==","HunUO2LQCDGb","HuoUnpLPXY2c","HueIZVrOs1NM","HuJMjvrQ8FY3","IXxWAACEwA==","JMT5gJ1ITA==","IKJc6Ayh4GM=","IKNM6DyiI68=","IKJc6BKI8A==","IKJc6A6EwA==","IAAA24aEwA==","HgAG/KIT","IXvq6AyEwA==","IXvq6AymHc7A","IXoG56il3i/A","If/824aEwA==","HgAK/KIT","KJw/4ySwhMA=","KJw6BX5AhMA="],"background":"#ffffff","elements":[[2,"Scene 6",1.5,[[1,"pig","","",[-6.0E-4,0.0],"",4,[[2,[],"",[0.803]],[4,[],"",23]]],[36,"fin",[0.5],"",[94.0,69.5],"",4,[[2,[0.0,0.9],"",[0.559,0.073,1.96,1.08]],[2,[0.9],"",[1.96,1.08]],[4,[0.0,0.9],"",61],[4,[0.9],"",61]]],[37,"Background [Media Icons]","","",[297.5,179.0],"",4,[[2,[],"",[1.08,1.01]],[4,[],"",62]]]]],[1,"",[[2,"Layer 1",[0.0,2.0],"","",[1],4,[]]],"",""],[9,"",[[3,"object 1_pig-01.svg",[0.0,2.0],"",[0.3417,-0.1081],"",4,[[2,[0.0,2.0],"",[0.457]],[4,[0.0,0.5],"",24],[4,[0.5,1.0],"",25],[4,[1.0,1.5],"",26],[4,[1.5,2.0],"",27]]],[21,"object 1_pig-06.svg",[0.0,2.0],"",[0.4,-0.4],"",4,[[1,[0.0,0.5],"",[0.0,-0.4188790204786391]],[1,[0.5,1.0],"",[-0.4188790204786391,0.0]],[1,[1.0,1.5],"",[0.0,0.4014257279586958]],[1,[1.5,2.0],"",[0.4014257279586958,0.0]],[2,[0.0,2.0],"",[0.457]],[4,[0.0,0.5],"",37],[4,[0.5,1.0],"",38],[4,[1.0,1.5],"",39],[4,[1.5,2.0],"",39]]],[24,"object 1_pig-03.svg",[0.0,2.0],"",[0.4,-0.4],"",4,[[1,[0.0,0.5],"",[0.0,-0.3839724354387525]],[1,[0.5,1.0],"",[-0.3839724354387525,0.0]],[1,[1.0,1.5],"",[0.0,0.3665191429188092]],[1,[1.5,2.0],"",[0.3665191429188092,0.0]],[2,[0.0,2.0],"",[0.457]],[4,[0.0,0.5],"",42],[4,[0.5,1.0],"",42],[4,[1.0,1.5],"",42],[4,[1.5,2.0],"",42]]],[27,"object 1_pig-02.svg",[0.0,2.0],"",[-0.4019,-0.199],"",4,[[2,[0.0,2.0],"",[0.457]],[4,[0.0,0.5],"",44],[4,[0.5,1.0],"",45],[4,[1.0,1.5],"",46],[4,[1.5,2.0],"",47]]],[30,"object 1_pig-05.svg",[0.0,2.0],"",[0.3995,-0.4],"",4,[[1,[0.0,0.5],"",[0.0,0.3665191429188092]],[1,[0.5,1.0],"",[0.3665191429188092,0.0]],[1,[1.0,1.5],"",[0.0,-0.3839724354387525]],[1,[1.5,2.0],"",[-0.3839724354387525,0.0]],[2,[0.0,2.0],"",[0.457]],[4,[0.0,0.5],"",50],[4,[0.5,1.0],"",51],[4,[1.0,1.5],"",52],[4,[1.5,2.0],"",53]]],[33,"object 1_pig-04.svg",[0.0,2.0],"",[0.3975,-0.4],"",4,[[1,[0.0,0.5],"",[0.0,0.3665191429188092]],[1,[0.5,1.0],"",[0.3665191429188092,0.0]],[1,[1.0,1.5],"",[0.0,-0.4014257279586958]],[1,[1.5,2.0],"",[-0.4014257279586958,0.0]],[2,[0.0,2.0],"",[0.457]],[4,[0.0,0.5],"",56],[4,[0.5,1.0],"",56],[4,[1.0,1.5],"",57],[4,[1.5,2.0],"",58]]]],"",""],[1,"",[[4,"Composite1","","",[109.499,153.899],"",4,[[4,[],"",28]]],[9,"Bezier1","","",[140.001,126.401],"",4,[[4,[],"",29]]],[10,"Bezier2","","",[79.001,126.401],"",4,[[4,[],"",30]]],[11,"Composite1","","",[159.1111,92.7919],"",4,[[4,[],"",31]]],[14,"Composite1","","",[59.9971,92.7788],"",4,[[4,[],"",33]]],[17,"Composite1","","",[109.551,126.4],"",4,[[4,[],"",35]]],[20,"Bezier3","","",[109.55,137.3485],"",4,[[4,[],"",36]]]],"",""],[1,"",[[5,"Composite1","","","","",4,[]],[8,"Bezier1","","","","",4,[]]],"",""],[1,"",[[6,"Bezier1","","","","",4,[]],[7,"Bezier2","","","","",4,[]]],"",""],[3,"#f05e96","","",0],[3,"#f05e96","","",1],[3,"#f07cb1","","",2],[3,"#424143","","",3],[3,"#424143","","",4],[1,"",[[12,"Bezier1","","","","",4,[]],[13,"Bezier2","","","","",4,[[1,[],"",[4.10333425605939]],[4,[],"",32]]]],"",""],[3,"#f07cb1","","",5],[3,"#f38ebb","","",6],[1,"",[[15,"Bezier1","","","","",4,[]],[16,"Bezier2","","","","",4,[[1,[],"",[5.321443704709989]],[4,[],"",34]]]],"",""],[3,"#f07cb1","","",7],[3,"#f38ebb","","",8],[1,"",[[18,"Bezier1","","","","",4,[]],[19,"Bezier2","","","","",4,[]]],"",""],[3,"#ffffff","","",9],[3,"#ffffff","","",10],[3,"#f38ebb","","",11],[1,"",[[22,"Bezier1","","",[249.648,279.3],"",4,[[4,[],"",40]]],[23,"Bezier2","","",[249.602,242.8995],"",4,[[4,[],"",41]]]],"",""],[3,"#424143","","",12],[3,"#f38ebb","","",13],[1,"",[[25,"Bezier1","","",[153.247,279.3],"",4,[[4,[],"",43]]],[26,"Bezier2","","",[153.202,242.8995],"",4,[[4,[],"",41]]]],"",""],[3,"#424143","","",14],[3,"#f38ebb","","",15],[1,"",[[28,"Bezier1","","",[188.7505,195.801],"",4,[[4,[],"",48]]],[29,"Bezier2","","",[306.455,197.0592],"",4,[[4,[],"",49]]]],"",""],[3,"#f07cb1","","",16],[3,"#f07cb1","","",17],[1,"",[[31,"Bezier1","","",[122.0985,279.3],"",4,[[4,[],"",54]]],[32,"Bezier2","","",[122.1005,242.8995],"",4,[[4,[],"",55]]]],"",""],[3,"#424143","","",18],[3,"#f06da4","","",19],[1,"",[[34,"Bezier1","","",[218.497,279.3],"",4,[[4,[],"",59]]],[35,"Bezier2","","",[218.502,242.8995],"",4,[[4,[],"",60]]]],"",""],[3,"#424143","","",20],[3,"#f06da4","","",21],[4,"#ffffff","","","normal 400 120px Underdog","","FIN",2],[3,"#000000","","",22],[2,"$$$LIBRARY$$$",10.0,[]],[2,"$$$FONTS_EMBED$$$",10.0,[]]],"scenes":[0]}};
+
+                if ('anm' in window) {
+                    anm.createPlayer(WRAPPER_ID, playerParams)
+                       .load(animation,
+                             anm.importers.create('animatron'));
+                } else if ('animatron' in window) {
+                    animatron.createPlayer(WRAPPER_ID, playerParams)
+                            .load(animation);
+                }
+            }
+            var clickTag = "http://www.animatron.com";
+
+                window.addEventListener("load", start);
+        </script>
+</head>
+<body>
+
+    <div id="target"></div>
+
+</body>
+</html>
