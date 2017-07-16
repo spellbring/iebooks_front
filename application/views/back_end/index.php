@@ -13,6 +13,7 @@
                         <span class="name">Bienvenidos</span>
                         <hr class="star-primary">
                         <span class="skills">A la clase de hoy</span>
+                        
                     </div>
                 </div>
             </div>

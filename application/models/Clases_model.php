@@ -22,8 +22,9 @@ class Clases_model extends CI_Model{
         return true;
     }
     
-    public function getClasesIns($id_institucion){
+    public function getClasesIns($id_institucion, $user){
         $this->db->select('a.idusuario'
+        		. ', a.usuario'
                 . ', c.idclase'
                 . ', c.descripcion as descripcionclase'
                 . ', c.max_cant_alumn'
@@ -34,7 +35,8 @@ class Clases_model extends CI_Model{
                 ->from('clase c')
                 ->join('usuario a', 'a.idusuario = c.usuario_idusuario','INNER')
                 ->join('institucion i','i.idinstitucion = a.institucion_idinstitucion','INNER')
-                ->where('i.idinstitucion',$id_institucion);
+                ->where('i.idinstitucion',$id_institucion)
+                ->where('a.usuario',$user);
         return $this->db->get()->result();
     }
     

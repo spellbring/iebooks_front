@@ -14,6 +14,7 @@
 
     <!-- Bootstrap Core CSS -->
      <link href="assets/template/css/bootstrap.min.css" rel="stylesheet">
+     <link href="assets/scripts/textillate-master/assets/animate.css" rel="stylesheet">
 
     <!-- Custom CSS -->
 <!--    <link href="assets/template/css/the-big-picture.css" rel="stylesheet">-->
@@ -27,7 +28,10 @@
 
 </head>
  
-      
+       <script src="assets/template/js/jquery.js"></script>
+       <script src="assets/scripts/textillate-master/assets/jquery.fittext.js"></script>
+       <script src="assets/scripts/textillate-master/assets/jquery.lettering.js"></script>
+       <script src="assets/scripts/textillate-master/jquery.textillate.js"></script>
 
 <body>
 

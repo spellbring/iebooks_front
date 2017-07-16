@@ -66,6 +66,7 @@ class Login extends CI_Controller {
                 if($objUser->usuario == $user && $objUser->password == $hash_pass)
                 {
                     $data = array(
+                    	'sess_id_user' => $objUser->usuario,
                         'sess_authenticado' => TRUE, 
                         'sess_nombre_admin' => $objUser->nombre_p, 
                         'sess_apellido_admin' => $objUser->apellido_p,
@@ -100,6 +101,7 @@ class Login extends CI_Controller {
         $usuario = $this->Usuarios_model->check_user($user);
         if($usuario)
         {
+        	
             foreach($usuario as $objUser)
             {
                 if($objUser->usuario == $user)

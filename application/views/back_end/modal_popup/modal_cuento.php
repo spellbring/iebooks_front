@@ -15,7 +15,11 @@
                     </a>
                   </div>
             <?php } ?>
-        <?php } ?>
+        <?php } else {?>
+       
+        <h3>No existen cuentos asignados a este profesional :(</h3>
+        
+         <?php }?>
         </div>
         </div>
       

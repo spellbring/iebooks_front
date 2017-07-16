@@ -31,9 +31,9 @@ class Home extends CI_Controller {
             'scripts/pages/dashboard'
         );
         
-
+     
         //End: Objetos
-        $_datos['objClases'] = $this->Clases_model->getClasesIns($this->session->userdata('sess_perfil_inst'));
+        $_datos['objClases'] = $this->Clases_model->getClasesIns($this->session->userdata('sess_perfil_inst'), $this->session->userdata('sess_id_user'));
         
         $_datos['objMaterial'] = $this->Clases_model;
 

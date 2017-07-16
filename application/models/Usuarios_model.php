@@ -7,7 +7,7 @@ class Usuarios_model extends CI_Model
     }
     
    public function check_user($user) {
-        $this->db->select('usuario, password, nombre_p, nombre_s, apellido_p, apellido_m, institucion_idinstitucion, perfil_idperfil')
+        $this->db->select('usuario, password, nombre_p, nombre_s, apellido_p, apellido_m, institucion_idinstitucion, perfil_idperfil', 'idusuario')
                 ->where('usuario', $user);
         $this->db->from('usuario');
         $consulta = $this->db->get();

@@ -26,4 +26,10 @@ class Cuento extends CI_Controller{
         $this->load->view('back_end/cuento', $_datos);
     }
     
+    public function estadistica(){
+    	
+    	$_datos = array();
+    	$this->load->view('home');
+    }
+    
 }

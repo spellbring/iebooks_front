@@ -47,7 +47,7 @@
 
     
 
-    <script src="assets/template/js/jquery.js"></script>
+   
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/template/js/bootstrap.min.js"></script>
